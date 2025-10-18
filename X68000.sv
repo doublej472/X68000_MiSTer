@@ -234,7 +234,7 @@ parameter CONF_STR = {
 	"d0P4ONQ,Crop Offset,0,2,4,8,10,12,-12,-10,-8,-6,-4,-2;",
 	"P4ORS,Scale,Normal,V-Integer,Narrower HV-Integer,Wider HV-Integer;",
 	"P4-;",
-	"P4o1,Video Frequency,60fps,Original;",
+	"P4o1,Video Frequency,Original,60fps;",
 	"P4O45,Aspect ratio,Original,Full Screen,[ARC1],[ARC2];",
 //	"P4OFH,Scandoubler Fx,None,HQ2x,CRT 25%,CRT 50%,CRT 75%;",
 	"h1P5,MT32-pi;",
@@ -775,7 +775,7 @@ X68K_top X68K_top
 	.ldr_wr(ldr_wr),
 	.ldr_ack(ldr_ack),
 	.ldr_done(ldr_done),
-	.vid_hz(~status[33]),
+	.vid_hz(status[33]),
 
 	.pPs2Clkin(ps2_kbd_clk_out),
 	.pPs2Clkout(ps2_kbd_clk_in),
