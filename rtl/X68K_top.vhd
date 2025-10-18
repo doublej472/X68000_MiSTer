@@ -2147,9 +2147,7 @@ port(
 	left     :out std_logic_vector(15 downto 0);
 	right    :out std_logic_vector(15 downto 0);
 	xleft    :out std_logic_vector(15 downto 0);
-	xright   :out std_logic_vector(15 downto 0);
-	dacleft  :out std_logic_vector(15 downto 0);
-	dacright :out std_logic_vector(15 downto 0)
+	xright   :out std_logic_vector(15 downto 0)
 );
 end component;
 
@@ -3908,9 +3906,7 @@ begin
 		left     => opm_sndl,
 		right    => opm_sndr,
 		xleft    => open,
-		xright   => open,
-		dacleft  => open,
-		dacright => open
+		xright   => open
 	);
 
 	pcm_ce<='1' when abus(23 downto 2)="1110100100100000000000" else '0';
